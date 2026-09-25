@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A responsive interactive navigation menu demo.">
+  <title>Northstar | Interactive Navigation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header" id="site-header">
+    <nav class="navbar" aria-label="Main navigation">
+      <a class="brand" href="#home" aria-label="Northstar home">
+        <span class="brand-mark" aria-hidden="true">N</span>
+        <span>northstar</span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-menu">
+        <span class="sr-only">Toggle navigation</span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links" id="primary-menu">
+        <li><a class="nav-link active" href="#home">Home</a></li>
+        <li><a class="nav-link" href="#about">About</a></li>
+        <li><a class="nav-link" href="#work">Work</a></li>
+        <li><a class="nav-link" href="#journal">Journal</a></li>
+        <li><a class="nav-link nav-cta" href="#contact">Let's talk <span aria-hidden="true">↗</span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow">Independent digital studio · Est. 2026</p>
+        <h1>Make space<br>for <em>better</em> ideas.</h1>
+        <p class="hero-description">We help ambitious teams turn complex challenges into clear, meaningful digital experiences.</p>
+        <a class="text-link" href="#work">Explore our work <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="hero-orbit" aria-hidden="true">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="orbit-core">01</div>
+      </div>
+    </section>
+
+    <section class="section content-section" id="about">
+      <div class="section-heading">
+        <p class="eyebrow">01 / The approach</p>
+        <h2>Curious by nature.<br><em>Clear by design.</em></h2>
+      </div>
+      <p class="section-lede">From first sketch to final detail, we partner with people who care about making a genuine difference. Our work is thoughtful, useful, and built to last.</p>
+    </section>
+
+    <section class="section work-section" id="work">
+      <div class="section-heading">
+        <p class="eyebrow">02 / Selected work</p>
+        <h2>Good work gets<br><em>noticed.</em></h2>
+      </div>
+      <div class="project-grid">
+        <article class="project-card project-card-large"><span>Brand systems</span><h3>Field notes</h3><p>Reframing how we see the natural world.</p></article>
+        <article class="project-card project-card-dark"><span>Digital product</span><h3>Atelier</h3><p>Tools for the next generation of makers.</p></article>
+        <article class="project-card project-card-sand"><span>Campaign</span><h3>Slow / Fast</h3><p>A study in considered movement.</p></article>
+      </div>
+    </section>
+
+    <section class="section journal-section" id="journal">
+      <div class="section-heading">
+        <p class="eyebrow">03 / From the journal</p>
+        <h2>Small thoughts,<br><em>big questions.</em></h2>
+      </div>
+      <div class="journal-list">
+        <a href="#journal"><span>01</span><strong>Designing for attention, not distraction</strong><span>Read article ↗</span></a>
+        <a href="#journal"><span>02</span><strong>The quiet power of a flexible system</strong><span>Read article ↗</span></a>
+        <a href="#journal"><span>03</span><strong>What makes an experience feel human?</strong><span>Read article ↗</span></a>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <p class="eyebrow">04 / Start a conversation</p>
+      <h2>Have a good<br><em>feeling?</em></h2>
+      <a class="contact-link" href="mailto:hello@northstar.studio">hello@northstar.studio <span aria-hidden="true">↗</span></a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>© 2026 Northstar Studio</span>
+    <span>Built with intention</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
