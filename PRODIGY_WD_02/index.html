@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A precision stopwatch with lap timing.">
+  <title>Pulse Stopwatch</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="stopwatch-card" aria-labelledby="page-title">
+      <header class="app-header">
+        <div class="brand">
+          <span class="brand-icon" aria-hidden="true"><span></span></span>
+          <span>pulse</span>
+        </div>
+        <span class="status"><span class="status-dot" aria-hidden="true"></span><span id="status-text">Ready</span></span>
+      </header>
+
+      <div class="display-area">
+        <p class="eyebrow" id="page-title">Precision stopwatch</p>
+        <div class="time-display" aria-live="polite" aria-atomic="true">
+          <span id="minutes">00</span><span class="separator">:</span><span id="seconds">00</span><span class="separator decimal">.</span><span class="milliseconds" id="milliseconds">00</span>
+        </div>
+        <p class="time-label"><span>MIN</span><span>SEC</span><span>1/100 SEC</span></p>
+      </div>
+
+      <div class="controls" aria-label="Stopwatch controls">
+        <button class="control-button secondary" id="reset-button" type="button" disabled>
+          <span class="button-icon" aria-hidden="true">↻</span> Reset
+        </button>
+        <button class="control-button primary" id="start-button" type="button">
+          <span class="button-icon play-icon" aria-hidden="true"></span><span id="start-label">Start</span>
+        </button>
+        <button class="control-button secondary" id="lap-button" type="button" disabled>
+          <span class="button-icon" aria-hidden="true">＋</span> Lap
+        </button>
+      </div>
+
+      <div class="laps-panel">
+        <div class="laps-heading">
+          <h2>Lap times</h2>
+          <span id="lap-count">0 laps</span>
+        </div>
+        <div class="laps-empty" id="laps-empty">
+          <span class="empty-icon" aria-hidden="true">◷</span>
+          <p>Your lap times will appear here</p>
+        </div>
+        <ol class="lap-list" id="lap-list" aria-label="Recorded lap times"></ol>
+      </div>
+
+      <footer class="keyboard-hint"><kbd>SPACE</kbd> to start / pause <span>·</span> <kbd>L</kbd> to record a lap</footer>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
