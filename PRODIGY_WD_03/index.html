@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A responsive Tic-Tac-Toe game for two players or player versus AI.">
+  <title>Threefold | Tic-Tac-Toe</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="game-shell">
+    <section class="game-card" aria-labelledby="game-title">
+      <header class="game-header">
+        <div>
+          <p class="eyebrow">Classic strategy game</p>
+          <h1 id="game-title">Threefold<span>.</span></h1>
+        </div>
+        <div class="scoreboard" aria-label="Scoreboard">
+          <div><span class="score-label">You</span><strong id="player-score">0</strong></div>
+          <div><span class="score-label">Draws</span><strong id="draw-score">0</strong></div>
+          <div><span class="score-label" id="opponent-label">AI</span><strong id="opponent-score">0</strong></div>
+        </div>
+      </header>
+
+      <div class="game-toolbar">
+        <div class="mode-switch" role="group" aria-label="Game mode">
+          <button class="mode-button active" type="button" data-mode="ai">Vs. computer</button>
+          <button class="mode-button" type="button" data-mode="human">Two players</button>
+        </div>
+        <button class="new-game-button" id="new-game" type="button">New game <span aria-hidden="true">↗</span></button>
+      </div>
+
+      <div class="turn-banner" id="turn-banner">
+        <span class="turn-marker" id="turn-marker">X</span>
+        <span id="turn-message">Your turn</span>
+      </div>
+
+      <div class="board" id="board" role="grid" aria-label="Tic-Tac-Toe board">
+        <button class="cell" type="button" data-index="0" role="gridcell" aria-label="Empty cell 1"></button>
+        <button class="cell" type="button" data-index="1" role="gridcell" aria-label="Empty cell 2"></button>
+        <button class="cell" type="button" data-index="2" role="gridcell" aria-label="Empty cell 3"></button>
+        <button class="cell" type="button" data-index="3" role="gridcell" aria-label="Empty cell 4"></button>
+        <button class="cell" type="button" data-index="4" role="gridcell" aria-label="Empty cell 5"></button>
+        <button class="cell" type="button" data-index="5" role="gridcell" aria-label="Empty cell 6"></button>
+        <button class="cell" type="button" data-index="6" role="gridcell" aria-label="Empty cell 7"></button>
+        <button class="cell" type="button" data-index="7" role="gridcell" aria-label="Empty cell 8"></button>
+        <button class="cell" type="button" data-index="8" role="gridcell" aria-label="Empty cell 9"></button>
+      </div>
+
+      <footer class="game-footer">
+        <span><b class="legend-x">X</b> You always go first</span>
+        <span id="footer-mode">Playing against the computer</span>
+      </footer>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
