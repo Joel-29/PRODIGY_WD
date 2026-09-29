@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A calm, simple weather dashboard for checking conditions anywhere.">
+  <title>Atmos — Weather, at a glance</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="Atmos home"><span class="brand-mark">✳</span><span>atmos</span></a>
+      <div class="header-meta"><span class="status-dot"></span><span>Live conditions</span><span class="date" id="today"></span></div>
+      <button class="unit-toggle" id="unit-toggle" type="button" aria-label="Switch to Fahrenheit">°C <span>/ °F</span></button>
+    </header>
+
+    <main>
+      <section class="intro">
+        <div>
+          <p class="eyebrow">Your daily weather window</p>
+          <h1>Know the sky<br><em>before you go.</em></h1>
+        </div>
+        <p class="intro-note">A clear forecast for wherever<br>the day takes you.</p>
+      </section>
+
+      <section class="search-area" aria-label="Choose a location">
+        <form class="search-form" id="search-form">
+          <label class="sr-only" for="location-input">Search for a city</label>
+          <span class="search-icon" aria-hidden="true">⌕</span>
+          <input id="location-input" type="search" placeholder="Search city or town..." autocomplete="off">
+          <button type="submit">Search <span>↗</span></button>
+        </form>
+        <button class="location-button" id="location-button" type="button"><span>◎</span> Use my location</button>
+        <p class="form-message" id="form-message" role="status"></p>
+      </section>
+
+      <section class="weather-layout" aria-live="polite">
+        <article class="current-card">
+          <div class="card-topline"><span id="location-label">Chennai, India</span><span id="observed-time">Updated now</span></div>
+          <div class="current-main">
+            <div class="weather-symbol" id="weather-symbol" aria-hidden="true">☀</div>
+            <div class="temperature"><span id="temperature">—</span><sup>°</sup></div>
+            <div class="condition"><strong id="condition">Loading weather</strong><span>Feels like <b id="feels-like">—</b>°</span></div>
+          </div>
+          <div class="current-footer">
+            <span><i class="mini-icon">↑</i> High <b id="high">—</b>°</span>
+            <span><i class="mini-icon down">↓</i> Low <b id="low">—</b>°</span>
+            <span><i class="mini-icon">◌</i> Humidity <b id="humidity">—</b>%</span>
+          </div>
+        </article>
+
+        <aside class="details-card">
+          <div class="card-heading"><span>Today’s details</span><span class="line"></span><span id="day-label">—</span></div>
+          <div class="detail-grid">
+            <div class="detail"><span class="detail-icon">≋</span><small>Wind</small><strong><b id="wind">—</b> <small>km/h</small></strong><span id="wind-direction">—</span></div>
+            <div class="detail"><span class="detail-icon">◌</span><small>Precipitation</small><strong><b id="rain">—</b><small> mm</small></strong><span>today</span></div>
+            <div class="detail"><span class="detail-icon">◒</span><small>Sunrise</small><strong id="sunrise">—</strong><span>local time</span></div>
+            <div class="detail"><span class="detail-icon">◓</span><small>Sunset</small><strong id="sunset">—</strong><span>local time</span></div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="forecast-section">
+        <div class="section-title"><p class="eyebrow">The week ahead</p><h2>Plan around <em>the weather.</em></h2></div>
+        <div class="forecast-list" id="forecast-list"></div>
+      </section>
+    </main>
+
+    <footer><span>Atmos / Weather made simple</span><span>Data by <a href="https://open-meteo.com/" target="_blank" rel="noreferrer">Open-Meteo</a></span></footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
